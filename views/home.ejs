@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <a class="button is-success" style="Margin:25px" href=/kayit>Yeni Kayıt Ekle</a>
+        
+    <table class="table">
+        <tr>
+                <th>No</th>
+                <th>SanatciAdi</th>
+                <th>Yasiyor Mu?</th>
+                <th>Dogum Tarihi</th>
+               <th>MuzikTuru</th>
+        
+               <th>AlbumAdi</th>
+               <th>EklenmeTarihi</th>
+               <th>CikisTarihi</tH>
+                   <th>Guncelle</th>
+                   <th>Sil</th>
+            </tr>
+
+            <% veri.forEach(function(Sanatci){ %>
+                <tr>
+                    <td>
+                            <%= Sanatci.SanatciId%>
+                    </td>                  
+                    <td>
+                        <%= Sanatci.SanatciAdi%>
+                    </td>
+                    <td>
+                        <%= Sanatci.SanatciYasiyormu %>
+                    </td>
+                    <td>
+                        <%= Sanatci.SanatciDogumTarihi %>
+                    </td>
+                    <td>
+                            <%= Sanatci.MuzikTur %>
+                        </td>
+                        <td>
+                                <%= Sanatci.AlbumAdi %>
+                            </td>
+                    <td>
+                        <%= Sanatci.EklenmeTarihi %>
+                    </td>
+                    
+                        <td>
+                                <%= Sanatci.CikisTarihi %>
+                            </td>
+                            
+                                
+                    <td>
+                            <a href="/guncelle/<%= Sanatci.SanatciId %>" class="button is-warning">Güncelle</a>
+                        </td>
+                        <td>
+                            <a name="/sil/<%= Sanatci.SanatciId %>" onclick="onay(this.name)"
+                                class="button is-danger">Kaydı Sil</a>
+                        </td>
+                    </tr>
+                    <% }); %>
+    </table>
+</div>
+</body>
+</html>

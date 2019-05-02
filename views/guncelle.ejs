@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <title>Document</title>
+
+
+</head>
+<body>
+        <form action="http://localhost:3000/guncelle" method="POST">
+    <br/><br/><br/>
+ 
+    <div class="columns is-multiline is-mobile">
+            <div class="column is-one-quarter">
+
+            </div>
+            <div class="column is-2 ">
+                <h4 class="subtitle is-4">Sanatci Adi</h4>
+            </div>
+            <div class="column is-one-quarter">
+              
+                    <% veri.forEach(function(turler){ %>
+                
+                    <input class="input" name="sanatciAdi" value="<%= turler.SanatciAdi %>" type="text" placeholder="Merve Özbey">
+   <% }); %>
+            </div>
+            <div class="column is-one-quarter">
+                 
+            </div>
+        </div>
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-one-quarter">
+
+            </div>
+            <div class="column is-2 ">
+                <h4 class="subtitle is-4">Hayattami?</h4>
+            </div>
+            <div class="column is-one-quarter">
+                <% veri.forEach(function(turler){ %>
+                <input type="radio" checked="checked" value="<%= turler.SanatciYasiyormu %>" name="hayattami">
+                Evet
+
+                <input type="radio" value="<%= turler.SanatciYasiyormu %>" name="hayattami">
+                Hayır
+                <% }); %>
+            </div>
+            <div class="column is-one-quarter">
+
+            </div>
+        </div>
+        
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-one-quarter">
+
+            </div>
+            <div class="column is-2 ">
+                <h4 class="subtitle is-4">Sanatçı Dogum Tarihi</h4>
+            </div>
+            <div class="column is-one-quarter">
+                    <% veri.forEach(function(turler){ %>
+                <input class="input"  name="dogumtarihi" value="<%= turler.SanatciDogumTarihi %>" type="text">
+                <% }); %>
+            </div>
+            <div class="column is-one-quarter">
+
+            </div>
+        </div>
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-one-quarter">
+
+            </div>
+            <div class="column is-2 ">
+                <h4 class="subtitle is-4">Album Adi</h4>
+            </div>
+            <div class="column is-one-quarter">
+
+                    <input class="input" name="albumadi" type="text" placeholder="Yakacak">
+
+            </div>
+            <div class="column is-one-quarter">
+                 
+            </div>
+        </div>
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-one-quarter">
+
+            </div>
+            <div class="column is-2 ">
+                <h4 class="subtitle is-4">CikisTarihi</h4>
+            </div>
+            <div class="column is-one-quarter">
+
+                    <input class="input" name="cikistarihi" type="date"  >
+
+            </div>
+            <div class="column is-one-quarter">
+                
+                 
+            </div>
+
+
+        </div>
+        <div class="columns is-multiline is-mobile">
+                <div class="column is-one-quarter">
+        
+                </div>
+                <div class="column is-2 ">
+                    <h5 class="subtitle is-5">MuzikTuru</h5>
+                </div>
+                <div class="column is-one-quarter">
+                        <div class="select">
+                               
+                            </div>
+                            <a class="button is-success" href="/MuzikTurEkle">MuzikTurEkle</a>
+                      
+                </div>
+        </div>
+
+
+
+
+
+
+
+<div class="columns is-multiline is-mobile">
+    <div class="column is-one-quarter">
+
+    </div>
+
+    <div class="column is-one-quarter">
+
+        <input type="submit" value="Onayla" class="button is-link">
+
+
+
+        <a href="/" class="button is-light">İptal</a>
+    </div>
+    <div class="column is-one-quarter">
+
+    </div>
+</div>
+
+</div>
+</form>
+</body>
+</html>

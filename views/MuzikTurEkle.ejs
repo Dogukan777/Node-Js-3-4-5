@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+        <form action="http://localhost:3000/MuzikTurEkle" method="POST">
+    <br /><br /><br />
+
+    <div class="columns is-multiline is-mobile">
+        <div class="column is-one-quarter">
+
+        </div>
+        <div class="column is-1 ">
+            <h5 class="subtitle is-5">MuzikTuru</h5>
+        </div>
+        <div class="column is-one-quarter">
+            <input class="input" name="muzikturinsert" type="text" placeholder="Pop,caz">
+            <br/>
+            <br/>
+            <input type="submit" value="Onayla" class="button is-link">
+
+
+
+            <a href="/AlbumEkle" class="button is-light">İptal</a>
+        </div>
+        <div class="column is-one-quarter">
+            <table class="table">
+                <tr>
+                    <th>No</th>
+                    <th>MuzikTur</th>
+                </tr>
+
+                <% veri.forEach(function(MuzikTur){ %>
+
+                    <tr>
+                        <td>
+                            <%= MuzikTur.MuzikTurId%>
+                        </td>
+                        <td>
+                            <%= MuzikTur.MuzikTur%>
+                        </td>
+                    </tr>
+                    <% }); %> 
+               
+            </table>
+
+
+        </div>
+    </div>
+
+
+
+    
+</body>
+
+</html>
